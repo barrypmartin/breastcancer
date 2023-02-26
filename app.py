@@ -90,6 +90,17 @@ with placeholder.container():
            st.markdown("### Detailed Data View")
            st.dataframe(df)
            time.sleep(1)
+         
+            
+import requests
+
+FILE_URL = 'https://raw.githubusercontent.com/barrypmartin/breastcancer/pages/1_%F0%9F%93%88_Plotting_Demo.py'
+
+response = requests.get(FILE_URL)
+
+code = response.content.decode('utf-8')
+
+st.code(code)
 
 
 
